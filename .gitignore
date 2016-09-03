@@ -3,8 +3,6 @@ capybara-*.html
 .rspec
 /log
 /tmp
-/db/*.sqlite3
-/db/*.sqlite3-journal
 /public/system
 /coverage/
 /spec/tmp
@@ -40,3 +38,11 @@ bower.json
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore sensitive application environment variables configuration
+/config/application.yml
+#Ignore all rubymine files
+/.idea
+
+#ignore
+*.ignore

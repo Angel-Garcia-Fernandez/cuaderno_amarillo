@@ -5,21 +5,27 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: sqlite3
+  adapter: mysql2
+  encoding: utf8
   pool: 5
-  timeout: 5000
+  username: cuaderno_amarillo_user
+  #socket: /tmp/mysql.sock
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: cuaderno_amarillo_development_db
+  password: <%= ENV['CUADERNO_AMARILLO_DATABASE_PASSWORD'] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: cuaderno_amarillo_test_db
+  password: <%= ENV['CUADERNO_AMARILLO_DATABASE_PASSWORD'] %>
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: cuaderno_amarillo_production_db
+  username: cuaderno_amarillo_user
+  password: <%= ENV['CUADERNO_AMARILLO_DATABASE_PASSWORD'] %>

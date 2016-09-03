@@ -20,4 +20,25 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  layouts:
+    application:
+      title: 'Campaign Challenge'
+    nav_links_for_auth:
+      edit_account: 'Edit account'
+      sign_in: 'Sign in'
+      sign_out: 'Sign out'
+      sign_up: 'Sign up'
+      users: 'Users'
+      advertiser_report: 'Advertiser-Report'
+      admin: 'Administration'
+    navigation:
+      home: 'Challenge'
+    navigation_links:
+      about: 'About'
+  pages:
+    about:
+      about:  "Web example about using and creating API REST on Ruby On Rails."
+      link: "About"
+      title: "About the Website"
+
+

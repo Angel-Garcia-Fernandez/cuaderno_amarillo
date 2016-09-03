@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <h3> <%= @users.model_name.plural.capitalize %> </h3>
+    <table class="table">
+      <thead>
+      <tr>
+        <th> <%= User.human_attribute_name :login %> </th>
+        <th> <%= User.human_attribute_name :email %> </th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @users.each do |user| %>
+          <tr>
+            <%= render user %>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
